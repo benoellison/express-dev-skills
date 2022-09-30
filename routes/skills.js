@@ -8,6 +8,14 @@ const skillsCtrl = require('../controllers/skills');
 //   res.send('respond with a resource');
 // });
 
-module.exports = router;
 
 router.get('/', skillsCtrl.index);
+router.get('/new', skillsCtrl.new);
+
+router.get(':skill', skillsCtrl.show)
+router.post('/', skillsCtrl.create)
+router.delete('/:skill', skillsCtrl.delete)
+
+router.get('/:skill/edit', skillsCtrl.edit)
+router.put('skills/edit');
+module.exports = router;

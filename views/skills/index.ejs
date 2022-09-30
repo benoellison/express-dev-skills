@@ -8,6 +8,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+    <!-- <%- include('../partials/header') %> -->
     Testing 123 Hello
+    <ul>
+    <% skills.forEach(skill => { %>
+        <li>
+            <a href="/skills/ <%= skill.skill %>">
+                <%= skill.skill %>
+            </a>
+        <%= skill.skill %>
+        -
+        Level: <%= skill.level %>
+    </li>
+    <% });
+</ul>
+    <!-- <%- include('../partials/footer') %> -->
 </body>
 </html>
